@@ -23,17 +23,32 @@ function playRound(humanChoice,computerChoice){
     if  (humanChoice == computerChoice) {
         console.log("Draw!")
     } else if( (humanChoice=="Rock" && (computerChoice=="Scissors")) || (humanChoice=="Paper" && (computerChoice=="Rock")) || (humanChoice=="Scissors" && (computerChoice=="Paper")) )
-    {
-        console.log("You WIN!!!")
-        humanScore += 1;
+        {
+            console.log("You WIN!!!")
+            humanScore += 1;
     } else if ( (humanChoice=="Scissors" && (computerChoice=="Rock")) || (humanChoice=="Rock" && (computerChoice=="Paper")) || (humanChoice=="Paper" && (computerChoice=="Scissors")) ) 
         {
             console.log("You Lose monkey! 🐵")
             computerScore += 1;
-    }
+        }
+        
         
 }
 
-const huCHoice= getHumanChoice();
-const coChoice = getComputerChoice();
-playRound(huCHoice , coChoice);
+
+function playDaGame(){
+    const huCHoice= ((getHumanChoice() ));
+    for(i=0; i<5 ; i++){
+        const coChoice = ((getComputerChoice() ));
+        (playRound(huCHoice , coChoice));
+        console.log("Your Score :" + humanScore)
+        console.log("The Computer's score:" +computerScore)
+    }
+}
+
+playDaGame();
+
+
+
+
+
