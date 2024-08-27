@@ -30,6 +30,8 @@ function playRound(humanChoice,computerChoice){
         {
             console.log("You Lose monkey! 🐵")
             computerScore += 1;
+        } else{
+            alert("Please only pick between Rock, Paper, and Scissors...")
         }
         
         
