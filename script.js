@@ -22,7 +22,16 @@ function getHumanChoice(){
 function playRound(humanChoice,computerChoice){
     if  (humanChoice == computerChoice) {
         console.log("Draw!")
-    } 
+    } else if( (humanChoice=="Rock" && (computerChoice=="Scissors")) || (humanChoice=="Paper" && (computerChoice=="Rock")) || (humanChoice=="Scissors" && (computerChoice=="Paper")) )
+    {
+        console.log("You WIN!!!")
+        humanScore += 1;
+    } else if ( (humanChoice=="Scissors" && (computerChoice=="Rock")) || (humanChoice=="Rock" && (computerChoice=="Paper")) || (humanChoice=="Paper" && (computerChoice=="Scissors")) ) 
+        {
+            console.log("You Lose monkey! 🐵")
+            computerScore += 1;
+    }
+        
 }
 
 const huCHoice= getHumanChoice();
