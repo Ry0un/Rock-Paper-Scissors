@@ -32,6 +32,7 @@ function playRound(humanChoice,computerChoice){
             computerScore += 1;
         } else{
             alert("Please only pick between Rock, Paper, and Scissors...")
+            window.location.reload(true)
         }
         
         
@@ -40,12 +41,11 @@ function playRound(humanChoice,computerChoice){
 
 function playDaGame(){
     const huCHoice= ((getHumanChoice() ));
-    for(i=0; i<5 ; i++){
         const coChoice = ((getComputerChoice() ));
         (playRound(huCHoice , coChoice));
         console.log("Your Score :" + humanScore)
         console.log("The Computer's score:" +computerScore)
-    }
+    
 }
 
 playDaGame();
