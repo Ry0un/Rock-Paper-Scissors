@@ -1,5 +1,12 @@
 function getComputerChoice(){
-    let $ = ["Rock","Paper","Scissors"]
-    alert($[Math.floor(Math.random()*$.length)]);
+let x = ["Rock","Paper","Scissors"]
+console.log(x[Math.floor(Math.random()*x.length)])
 }
-getComputerChoice()
+getComputerChoice();
+
+function getHumanChoice(){
+    
+
+
+
+}
