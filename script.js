@@ -3,9 +3,9 @@ let computerScore = 0
 
 
 function getComputerChoice(){
-    const choices= ["Rock","Paper","Scissors"]
-    const randomize= choices[Math.floor(Math.random()*choices.length)]
-    console.log("The computer chose: " +randomize)
+    const choices= ["Rock","Paper","Scissors"];
+    const randomize= choices[Math.floor(Math.random()*choices.length)];
+        console.log("The computer chose: " +randomize);
     return randomize
 }
 
@@ -30,7 +30,7 @@ function playRound(humanChoice,computerChoice){
         {
             console.log("You Lose monkey! 🐵")
             computerScore += 1;
-        } else{
+    } else{
             alert("Please only pick between Rock, Paper, and Scissors...")
             window.location.reload(true)
         }
